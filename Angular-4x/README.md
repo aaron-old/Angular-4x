@@ -2,13 +2,19 @@
 
 - Create a new Web Api Project in Visual Studio
   - it can be 4.x (4.5x, 4.6x, 4.7x), this example uses 4.7.
-- Once the project is created run the following ng command
-  - `ng new appName -p {prefix} --routing -g --style {style extension} --directory ./`
-  - A list of the commands are available on [Angular CLI wiki](https://github.com/angular/angular-cli/wiki/new)
-  - this will create the folders inline with the current project structure.
-- Install all the npm dependencies for angular and the project.
+- Once the project is created run the following ng command at the directory above the web project <br>
+  `ng new appName -p {prefix} --routing -g --style {style extension} --directory ./`
+
+- A list of the commands are available on [Angular CLI wiki](https://github.com/angular/angular-cli/wiki/new)
+
+- This will create the folders inline with the current project structure.
+
+- Install all the npm dependencies for angular and the project (`npm install`).
+
 - Build the project ` ng build `
-- The dist directory will be used to store the scripts that will run on the index
+
+- The `dist` directory will be used to store the scripts that will run on the index by default, 
+you can change this location in the `angular.json` file
 
 In order to get a normal development envrionment, the index of the application needs to contain
 references to the distribution scripts;
@@ -25,3 +31,24 @@ based on the environment
 
 in dev it could look like this
 ` ng build ...options --output-dir dist/dev `
+
+
+### Teach the MVC router to use the Angular Router
+in the App_Start/RouteConfig, the current setup creates the router for mvc, and needs to be overwritten
+so that any requests may be sent to the index controller method.
+```` 
+routes.MapRoute(
+    name: "default",
+    url: "{*url}",
+    defaults: new { controller = "Home", action = "Index" }
+  ); 
+````
+
+### How do I bring in modules w/o internet
+The fun part, there are a copy solutions but the simplist in our current environment revolves around copy
+
+Currently, I have a mapped directory on my profile that is shared between the location with the internet connection
+and the offline location
+
+I wrote a robocopy script to update my offline location with this mapped drives changes.. or I could simply just copy
+over all the new stuff from that day.
