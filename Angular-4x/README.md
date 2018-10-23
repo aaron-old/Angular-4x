@@ -9,7 +9,12 @@
   - A list of the commands are available on [Angular CLI wiki](https://github.com/angular/angular-cli/wiki/new)
 
 - This will create the folders inline with the current project structure.
-
+- Since the ASP.net scaffolded files will unlikely be used, you can remove the following;
+  - Clear the contents of `App_Start/BundleConfig`
+  - Delete the directory `Areas/`
+  - (Optional) Delete the directory `Content`
+  - (Optional) Delete the directory `Scripts`
+  
 - Install all the npm dependencies for angular and the project (`npm install`).
 
 - Build the project ` ng build `
