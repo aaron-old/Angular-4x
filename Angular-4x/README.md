@@ -6,7 +6,7 @@
 - Once the project is created run the following ng command at the directory above the web project <br>
   `ng new appName -p {prefix} --routing -g --style {style extension} --directory ./`
 
-- A list of the commands are available on [Angular CLI wiki](https://github.com/angular/angular-cli/wiki/new)
+  - A list of the commands are available on [Angular CLI wiki](https://github.com/angular/angular-cli/wiki/new)
 
 - This will create the folders inline with the current project structure.
 
