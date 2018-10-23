@@ -1,5 +1,6 @@
 ## Working with ASP.NET 4.x & Angular 6
 
+### Creating a New Project
 - Create a new Web Api Project in Visual Studio (w/ MVC)
   - it can be 4.x (4.5x, 4.6x, 4.7x), this example uses 4.7.
 - Once the project is created run the following ng command at the directory above the web project <br>
