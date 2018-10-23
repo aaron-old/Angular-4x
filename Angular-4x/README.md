@@ -5,6 +5,7 @@
   - it can be 4.x (4.5x, 4.6x, 4.7x), this example uses 4.7.
 - Once the project is created run the following ng command at the directory above the web project <br>
   `ng new appName -p {prefix} --routing -g --style {style extension} --directory ./`
+  - If your in an offline environment pass the `--skip-install` so you may provide project deps manually.
 
   - A list of the commands are available on [Angular CLI wiki](https://github.com/angular/angular-cli/wiki/new)
 
