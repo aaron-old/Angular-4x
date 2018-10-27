@@ -1,14 +1,21 @@
 ## Working with ASP.NET 4.x & Angular 6
 
-- Create a new Web Api Project in Visual Studio
+### Creating a New Project
+- Create a new Web Api Project in Visual Studio (w/ MVC)
   - it can be 4.x (4.5x, 4.6x, 4.7x), this example uses 4.7.
 - Once the project is created run the following ng command at the directory above the web project <br>
   `ng new appName -p {prefix} --routing -g --style {style extension} --directory ./`
+  - If your in an offline environment pass the `--skip-install` so you may provide project deps manually.
 
-- A list of the commands are available on [Angular CLI wiki](https://github.com/angular/angular-cli/wiki/new)
+  - A list of the commands are available on [Angular CLI wiki](https://github.com/angular/angular-cli/wiki/new)
 
 - This will create the folders inline with the current project structure.
-
+- Since the ASP.net scaffolded files will unlikely be used, you can remove the following;
+  - Clear the contents of `App_Start/BundleConfig`
+  - Delete the directory `Areas/`
+  - (Optional) Delete the directory `Content`
+  - (Optional) Delete the directory `Scripts`
+  
 - Install all the npm dependencies for angular and the project (`npm install`).
 
 - Build the project ` ng build `
@@ -30,7 +37,7 @@ it is possible to change the location of where the build is run, and also it cou
 based on the environment
 
 in dev it could look like this
-` ng build ...options --output-dir dist/dev `
+` ng build ...options --output-path dist/dev `
 
 
 ### Teach the MVC router to use the Angular Router
