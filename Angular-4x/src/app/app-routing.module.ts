@@ -11,6 +11,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'admin',
+    loadChildren: './modules/admin/admin.module#AdminModule'
+  },
+  {
     path: 'server-error',
     component: ServerErrorComponent,
     pathMatch: 'full'
@@ -23,7 +27,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
