@@ -37,7 +37,7 @@ it is possible to change the location of where the build is run, and also it cou
 based on the environment
 
 in dev it could look like this
-` ng build ...options --output-path dist/dev `
+` ng build { A list of options } --output-path dist/dev `
 
 
 ### Teach the MVC router to use the Angular Router
