@@ -52,7 +52,7 @@ routes.MapRoute(
 ````
 
 ### How do I bring in modules w/o internet
-The fun part, there are a copy solutions but the simplist in our current environment revolves around copy
+The fun part, probably easier solutions but the simplist in our current environment revolves around copy
 
 Currently, I have a mapped directory on my profile that is shared between the location with the internet connection
 and the offline location
