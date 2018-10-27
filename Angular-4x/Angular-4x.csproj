@@ -157,7 +157,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -177,7 +176,7 @@
     <Content Include="angular.json" />
     <Content Include="e2e\tsconfig.e2e.json" />
     <Content Include="src\app\app.component.html" />
-    <Content Include="src\app\not-found\not-found.component.html" />
+    <Content Include="src\app\pages\not-found\not-found.component.html" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\karma.conf.js" />
@@ -189,9 +188,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Index.cshtml" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="src\app\app.component.scss" />
@@ -204,10 +201,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\api\" />
+    <Folder Include="src\app\modules\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="src\app\not-found\not-found.component.scss" />
+    <Content Include="src\app\pages\not-found\not-found.component.scss" />
+    <Content Include="Views\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="e2e\src\app.e2e-spec.ts" />
@@ -216,8 +216,8 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
-    <TypeScriptCompile Include="src\app\not-found\not-found.component.spec.ts" />
-    <TypeScriptCompile Include="src\app\not-found\not-found.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\not-found\not-found.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\pages\not-found\not-found.component.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />

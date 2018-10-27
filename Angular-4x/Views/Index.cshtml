@@ -1,0 +1,37 @@
+@{
+    var files = new string[5];
+    var env = System.Configuration.ConfigurationManager.AppSettings["env"];
+    var path = HttpContext.Current.Server.MapPath($"~/dist/{env}");
+    try
+    {
+      files = System.IO.Directory.GetFiles(path, "*.js");
+    }
+    catch(Exception e)
+    {
+      files = new string[0];
+    }
+}
+<!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>App - @env</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <roms-root></roms-root>
+    @foreach(var file in files)
+    {
+      var idx = file.IndexOf($"\\dist\\{env}");
+      var fileName = file.Substring(idx);
+      <script type="text/javascript" src="@fileName"></script>
+    }
+    @if(files.Length == 0)
+    {
+      <p>Error</p>
+    }
+  </body>
+  </html>

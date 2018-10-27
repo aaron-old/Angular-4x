@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,7 +12,13 @@ namespace Angular_4x.Controllers
         {
             ViewBag.Title = "Home Page";
 
-            return View();
+            return View("~/Views/Index.cshtml");
         }
+
+        public ActionResult Error()
+        {
+            return View("~/Views/Error.cshtml");
+        }
+    
     }
 }
