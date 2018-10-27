@@ -10,14 +10,7 @@ namespace Angular_4x.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
             return View("~/Views/Index.cshtml");
-        }
-
-        public ActionResult Error()
-        {
-            return View("~/Views/Error.cshtml");
         }
     
     }
