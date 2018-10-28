@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace Angular_4x.Controllers
 {
-    public class HomeController : Controller
+    public class AppController : Controller
     {
         public ActionResult Index()
         {
             return View("~/Views/Index.cshtml");
         }
-    
+
     }
 }

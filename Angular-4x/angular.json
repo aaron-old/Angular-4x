@@ -37,7 +37,7 @@
               "optimization": true,
               "outputHashing": "all",
               "buildOptimizer": true,
-              "outputPath":  "dist/test"
+              "outputPath": "dist/test"
             },
             "production": {
               "fileReplacements": [
@@ -55,7 +55,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "outputPath":  "dist/release"
+              "outputPath": "dist/release"
             }
           }
         },

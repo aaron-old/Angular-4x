@@ -1,9 +1,9 @@
 namespace Angular_4x
 {
-  using System.Web.Mvc;
-  using System.Web.Routing;
+    using System.Web.Mvc;
+    using System.Web.Routing;
 
-  public class RouteConfig
+    public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
@@ -12,8 +12,8 @@ namespace Angular_4x
             routes.MapRoute(
                       name: "default",
                       url: "{*url}",
-                      defaults: new { controller = "Home", action = "Index" } // The view that bootstraps Angular 2 app
+                      defaults: new { controller = "App", action = "Index" } // The view that bootstraps Angular 2 app
                   );
-              }
+        }
     }
 }
